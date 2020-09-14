@@ -51,7 +51,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func guessLetterFieldChanged(_ sender: UITextField) {
-        let text = guessedLetterTextField.text!
+        var text = guessedLetterTextField.text!
+        text = String(text.last ?? " ").trimmingCharacters(in: .whitespaces)
+        guessedLetterTextField.text = text
         guessLetterButton.isEnabled = !(text.isEmpty)
     }
     
