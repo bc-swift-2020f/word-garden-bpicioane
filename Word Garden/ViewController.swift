@@ -81,7 +81,7 @@ class ViewController: UIViewController {
        }
     
     func updateGameStatusLabels() {
-        //update labels
+        //update labels.
         wordsGuessedLabel.text = "Words Guessed: \(wordsGuessedCount)"
         wordsMissedLabel.text = "Words Missed: \(wordsMissedCount)"
         wordsRemainingLabel.text = "Words to Guess: \(wordsToGuess.count - (wordsGuessedCount + wordsMissedCount))"
